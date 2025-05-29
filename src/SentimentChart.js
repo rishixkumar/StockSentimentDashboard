@@ -52,7 +52,15 @@ export function SentimentTrendChart({ headlines }) {
     },
   };
 
-  return <Line data={data} options={options} />;
+  return (
+    <div style={{ position: 'relative', height: '400px', width: '100%' }}>
+      <Line data={data} options={{
+        ...options,
+        responsive: true,
+        maintainAspectRatio: false
+      }} />
+    </div>
+  );
 }
 
 export function SentimentDistribution({ headlines }) {
@@ -89,5 +97,13 @@ export function SentimentDistribution({ headlines }) {
     },
   };
 
-  return <Bar data={data} options={options} />;
+  return (
+    <div style={{ position: 'relative', height: '400px', width: '100%' }}>
+      <Bar data={data} options={{
+        ...options,
+        responsive: true,
+        maintainAspectRatio: false
+      }} />
+    </div>
+  );
 }
