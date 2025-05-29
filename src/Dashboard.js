@@ -73,20 +73,20 @@ export default function Dashboard() {
             gridTemplateColumns: '1fr 1fr',
             gap: '2rem',
             marginBottom: '2rem',
-            alignItems: 'stretch' // Ensures both cards stretch to the same height
+            alignItems: 'stretch'
         }}
         >
         {/* Stock Ticker Card */}
         <div
             className="card"
             style={{
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: 'center',
-            width: '100%',
-            height: '100%', // Fills the grid cell
-            boxSizing: 'border-box'
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                justifyContent: 'center',
+                width: '100%',
+                boxSizing: 'border-box',
+                padding: '1rem 1rem'
             }}
         >
             <label
@@ -120,7 +120,9 @@ export default function Dashboard() {
                 fontSize: '2rem',
                 fontWeight: '700',
                 textAlign: 'center',
-                width: 100
+                width: 180,
+                lineHeight: '2.2rem',
+                height: '2.6rem'
                 }}
             />
             <button className="btn-primary" onClick={() => fetchNews(ticker)}>
@@ -132,16 +134,16 @@ export default function Dashboard() {
         <div
             className="card"
             style={{
-            borderLeft: `6px solid ${getSentimentColor(newsData.average_sentiment)}`,
-            background: 'linear-gradient(135deg, var(--soft-ivory) 0%, #f5f0e8 100%)',
-            textAlign: 'center',
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: 'center',
-            width: '100%',
-            height: '100%', // Fills the grid cell
-            boxSizing: 'border-box'
+                borderLeft: `6px solid ${getSentimentColor(newsData.average_sentiment)}`,
+                background: 'linear-gradient(135deg, var(--soft-ivory) 0%, #f5f0e8 100%)',
+                textAlign: 'center',
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                justifyContent: 'center',
+                width: '100%',
+                boxSizing: 'border-box',
+                padding: '1rem 1rem'
             }}
         >
             <h2
