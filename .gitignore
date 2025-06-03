@@ -21,3 +21,10 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+
+# backend sensitive data
+backend/.env
+backend/stock_sentiment.db
+backend/__pycache__
+backend/*.db
